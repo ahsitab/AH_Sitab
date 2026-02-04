@@ -621,11 +621,19 @@ footer {
 
     .hero-content {
         grid-template-columns: 1fr;
+        justify-items: center;
+        /* Ensure centered items */
         text-align: center;
-        gap: 3rem;
+        gap: 2rem;
+        /* Reduced gap since image has margin */
         padding-top: 6rem;
-        /* More space for fixed header */
         padding-bottom: 2rem;
+    }
+
+    .hero-image {
+        order: -1;
+        /* Move image to top */
+        margin-bottom: 1.5rem;
     }
 
     /* Better card padding on mobile */
