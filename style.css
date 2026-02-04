@@ -481,7 +481,8 @@ nav {
 /* Projects Section */
 .projects-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    /* Reduced min-width for better mobile fit */
     gap: 2rem;
 }
 
@@ -622,11 +623,28 @@ footer {
         grid-template-columns: 1fr;
         text-align: center;
         gap: 3rem;
-        padding-top: 2rem;
+        padding-top: 6rem;
+        /* More space for fixed header */
+        padding-bottom: 2rem;
+    }
+
+    /* Better card padding on mobile */
+    .about-card,
+    .project-content,
+    .edu-card {
+        padding: 1.5rem;
+    }
+
+    /* Adjust Grid for very small screens */
+    .skills-grid,
+    .projects-grid {
+        grid-template-columns: 1fr;
+        /* Stack single column on mobile */
     }
 
     .hero-text h1 {
-        font-size: 2.5rem;
+        font-size: 2.25rem;
+        /* Slightly smaller than desktop but readable */
         margin-bottom: 0.5rem;
     }
 
@@ -652,8 +670,9 @@ footer {
     }
 
     .img-wrapper {
-        width: 250px;
-        height: 250px;
+        width: 200px;
+        /* Smaller image on mobile */
+        height: 200px;
     }
 
     .timeline {
@@ -666,11 +685,19 @@ footer {
 }
 
 @media (max-width: 480px) {
+    .container {
+        padding: 0 1rem;
+    }
+
     .hero-text h1 {
         font-size: 2rem;
     }
 
     .section-title {
         font-size: 1.75rem;
+    }
+
+    .project-title {
+        font-size: 1.1rem;
     }
 }
