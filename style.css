@@ -632,7 +632,7 @@ footer {
 
     .hero-image {
         order: -1;
-        /* Move image to top */
+        /* Move image to top: Verified for Mobile */
         margin-bottom: 1.5rem;
     }
 
