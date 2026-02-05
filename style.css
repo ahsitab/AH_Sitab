@@ -210,7 +210,7 @@ nav {
     align-items: center;
     position: relative;
     padding-top: 80px;
-    overflow: hidden;
+    /* overflow: hidden; Removed to allow content to expand if needed */
 }
 
 .hero-content {
@@ -259,6 +259,8 @@ nav {
 .cta-buttons {
     display: flex;
     gap: 1rem;
+    flex-wrap: wrap;
+    /* Ensure buttons wrap if they don't fit */
 }
 
 .btn {
