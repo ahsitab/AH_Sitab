@@ -64,7 +64,7 @@ h5,
 h6 {
     font-family: var(--font-heading);
     font-weight: 700;
-    color: #fff;
+    color: var(--text-primary);
 }
 
 a {
@@ -96,6 +96,7 @@ ul {
     display: block;
     width: fit-content;
     margin: 0 auto 3rem auto;
+    max-width: 100%;
 }
 
 .section-title::after {
@@ -153,7 +154,7 @@ nav {
     margin-left: 2rem;
     cursor: pointer;
     font-size: 1.2rem;
-    color: var(--text-primary);
+    color: #ffffff;
     transition: var(--transition);
     padding: 0.5rem;
     border-radius: 50%;
@@ -171,7 +172,7 @@ nav {
 
 .nav-links a {
     font-weight: 500;
-    color: var(--text-secondary);
+    color: #e2e8f0;
     position: relative;
 }
 
@@ -387,6 +388,14 @@ nav {
     background: linear-gradient(to bottom, var(--primary-color), var(--accent-color));
 }
 
+.about-card h3 {
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+}
+
 /* Education Section */
 .timeline {
     position: relative;
@@ -453,7 +462,9 @@ nav {
     color: var(--secondary-color);
     display: flex;
     align-items: center;
+    justify-content: center;
     gap: 0.5rem;
+    text-align: center;
 }
 
 .skill-tags {
@@ -510,7 +521,8 @@ nav {
 .project-title {
     font-size: 1.25rem;
     margin-bottom: 0.5rem;
-    color: white;
+    color: var(--text-primary);
+    text-align: center;
 }
 
 .project-tech {
@@ -540,12 +552,29 @@ nav {
 }
 
 /* Section Subheaders */
+/* Section Subheaders */
 .subsection-title {
-    font-size: 1.5rem;
-    margin: 3rem 0 1.5rem;
-    color: var(--text-primary);
-    border-left: 4px solid var(--accent-color);
-    padding-left: 1rem;
+    font-size: 2.5rem;
+    margin: 4rem auto 2rem auto;
+    text-align: center;
+    background: linear-gradient(to right, var(--secondary-color), var(--accent-color));
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    position: relative;
+    width: fit-content;
+}
+
+.subsection-title::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60px;
+    height: 4px;
+    background: var(--primary-color);
+    border-radius: 2px;
 }
 
 /* Footer */
@@ -703,6 +732,10 @@ footer {
 
     .section-title {
         font-size: 1.75rem;
+    }
+
+    .subsection-title {
+        font-size: 1.3rem;
     }
 
     .project-title {
