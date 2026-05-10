@@ -50,10 +50,52 @@ body {
     color: var(--text-primary);
     font-family: var(--font-body);
     line-height: 1.7;
-    /* Slightly increased line height for readability */
     overflow-x: hidden;
     font-size: 1.125rem;
-    /* Increased base size (approx 18px) */
+    cursor: none;
+}
+
+/* Custom Cursor Styles */
+.cursor-dot {
+    width: 8px;
+    height: 8px;
+    background-color: var(--secondary-color);
+    border-radius: 50%;
+    position: fixed;
+    pointer-events: none;
+    z-index: 9999;
+    transform: translate(-50%, -50%);
+}
+
+.cursor-outline {
+    width: 40px;
+    height: 40px;
+    border: 2px solid var(--secondary-color);
+    border-radius: 50%;
+    position: fixed;
+    pointer-events: none;
+    z-index: 9998;
+    transform: translate(-50%, -50%);
+    transition: width 0.3s, height 0.3s, background-color 0.3s;
+}
+
+@media (max-width: 768px) {
+    body {
+        cursor: auto;
+    }
+    .cursor-dot, .cursor-outline, #smoke-canvas {
+        display: none;
+    }
+}
+
+#smoke-canvas {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 10000;
 }
 
 h1,
@@ -459,14 +501,36 @@ nav {
     gap: 2rem;
 }
 
+.skill-category {
+    background: var(--glass);
+    padding: 2rem;
+    border-radius: 20px;
+    border: 1px solid var(--glass-border);
+    transition: var(--transition);
+    position: relative;
+    overflow: hidden;
+}
+
+.skill-category:hover {
+    transform: translateY(-5px);
+    border-color: var(--secondary-color);
+    box-shadow: 0 10px 30px rgba(52, 152, 219, 0.1);
+}
+
 .skill-category h3 {
-    margin-bottom: 1rem;
+    margin-bottom: 1.5rem;
     color: var(--secondary-color);
     display: flex;
     align-items: center;
-    justify-content: center;
-    gap: 0.5rem;
-    text-align: center;
+    gap: 0.8rem;
+    font-size: 1.4rem;
+}
+
+.skill-category h3 i {
+    font-size: 1.2rem;
+    padding: 0.8rem;
+    background: rgba(52, 152, 219, 0.1);
+    border-radius: 12px;
 }
 
 .skill-tags {
@@ -476,19 +540,37 @@ nav {
 }
 
 .skill-tag {
-    background: rgba(41, 128, 185, 0.1);
-    color: var(--secondary-color);
-    padding: 0.5rem 1rem;
-    border-radius: 20px;
-    font-size: 0.9rem;
-    border: 1px solid rgba(41, 128, 185, 0.2);
+    background: rgba(255, 255, 255, 0.03);
+    color: var(--text-primary);
+    padding: 0.6rem 1.2rem;
+    border-radius: 12px;
+    font-size: 0.85rem;
+    border: 1px solid var(--glass-border);
     transition: var(--transition);
 }
 
 .skill-tag:hover {
-    background: var(--primary-color);
+    background: var(--secondary-color);
     color: white;
-    transform: translateY(-3px);
+    transform: scale(1.05);
+    box-shadow: 0 0 15px rgba(52, 152, 219, 0.4);
+}
+
+.skill-tag-alt {
+    background: rgba(255, 255, 255, 0.03);
+    color: var(--text-primary);
+    padding: 0.6rem 1.2rem;
+    border-radius: 12px;
+    font-size: 0.85rem;
+    border: 1px solid var(--glass-border);
+    transition: var(--transition);
+}
+
+.skill-tag-alt:hover {
+    background: var(--accent-color);
+    color: white;
+    transform: scale(1.05);
+    box-shadow: 0 0 15px rgba(142, 68, 173, 0.4);
 }
 
 /* Projects Section */
@@ -515,9 +597,35 @@ nav {
     border-color: var(--secondary-color);
 }
 
+.project-image {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-bottom: 1px solid var(--glass-border);
+    transition: var(--transition);
+}
+
+.project-card:hover .project-image {
+    transform: scale(1.05);
+}
+
 .project-content {
     padding: 1.5rem;
     flex-grow: 1;
+}
+
+.project-links {
+    display: flex;
+    align-items: center;
+}
+
+.project-links i {
+    transition: var(--transition);
+}
+
+.project-links i:hover {
+    color: var(--primary-color) !important;
+    transform: scale(1.2);
 }
 
 .project-title {
@@ -554,6 +662,43 @@ nav {
 }
 
 /* Section Subheaders */
+/* Research Section Specifics */
+#research .projects-grid {
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+}
+
+#research .project-card {
+    background: linear-gradient(135deg, rgba(30, 41, 59, 0.4) 0%, rgba(15, 23, 42, 0.6) 100%);
+    border: 1px solid var(--accent-color);
+    box-shadow: 0 4px 20px rgba(142, 68, 173, 0.1);
+}
+
+#research .project-title {
+    font-size: 1.5rem;
+    color: var(--text-primary);
+    text-align: left;
+    border-bottom: 1px solid rgba(142, 68, 173, 0.2);
+    padding-bottom: 0.5rem;
+    margin-bottom: 1rem;
+}
+
+#research .project-desc ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+#research .project-desc li {
+    position: relative;
+    padding-left: 1.5rem;
+}
+
+#research .project-desc li::before {
+    content: '◈';
+    position: absolute;
+    left: 0;
+    color: var(--accent-color);
+}
+
 /* Section Subheaders */
 .subsection-title {
     font-size: 2.5rem;
