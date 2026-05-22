@@ -36,9 +36,9 @@
                 <ul class="nav-links">
                     <li><a href="#hero">Home</a></li>
                     <li><a href="#about">About</a></li>
+                    <li><a href="#education">Education</a></li>
                     <li><a href="#skills">Skills</a></li>
                     <li><a href="#projects">Projects</a></li>
-                    <li><a href="#education">Education</a></li>
                 </ul>
                 <div class="theme-toggle">
                     <i class="fas fa-sun" id="theme-icon"></i>
@@ -100,6 +100,55 @@
                     <br><br>
                     Through academic projects and hands-on development work, I have gained experience in building software solutions, implementing AI/ML models, and working on applied research. I am motivated to continuously grow my technical expertise and contribute innovative, data-driven solutions as a versatile professional.
                 </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Education Section -->
+    <section id="education">
+        <div class="container">
+            <h2 class="section-title">Education</h2>
+            <div class="timeline">
+
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="edu-card">
+                        <span class="edu-year">2026 – Present</span>
+                        <h3>MSc in Artificial Intelligence and Machine Learning</h3>
+                        <h4>East West University</h4>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="edu-card">
+                        <span class="edu-year">2022 – 2026</span>
+                        <h3>BSc in Computer Science and Engineering</h3>
+                        <h4>East West University</h4>
+                        <p>CGPA: 3.71</p>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="edu-card">
+                        <span class="edu-year">2019 – 2020</span>
+                        <h3>Higher Secondary Certificate (HSC)</h3>
+                        <h4>St. Gregory High School and College</h4>
+                        <p>GPA: 5.00 | Science Group</p>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="edu-card">
+                        <span class="edu-year">2016 – 2018</span>
+                        <h3>Secondary School Certificate (SSC)</h3>
+                        <h4>Trust School</h4>
+                        <p>GPA: 5.00 | Science Group</p>
+                    </div>
+                </div>
+
             </div>
         </div>
     </section>
@@ -189,6 +238,52 @@
             <h2 class="section-title">Recent Projects</h2>
             <div class="projects-grid">
 
+                <!-- New Project: Pedestrian Detection & Multi-Object Tracking -->
+                <div class="project-card">
+                    <img src="pedestrian-tracking.png" alt="Pedestrian Detection & Multi-Object Tracking" class="project-image">
+                    <div class="project-content">
+                        <div style="display: flex; justify-content: space-between; align-items: start;">
+                            <h3 class="project-title">Pedestrian Detection & Multi-Object Tracking</h3>
+                            <a href="https://github.com/ahsitab" target="_blank" title="GitHub Repo"><i class="fab fa-github" style="color: var(--secondary-color);"></i></a>
+                        </div>
+                        <div class="project-tech">
+                            <span class="tech-pill">YOLOv8</span>
+                            <span class="tech-pill">SORT</span>
+                            <span class="tech-pill">Kalman Filter</span>
+                            <span class="tech-pill">Streamlit</span>
+                        </div>
+                        <div class="project-desc">
+                            <ul>
+                                <li>Real-time pedestrian detection and multi-object tracking system using YOLOv8 + SORT with consistent identity preservation.</li>
+                                <li>Custom interactive glassmorphism dashboard with CPU optimization, dynamic resolution scaling, and smart frame skipping (boosted performance from 2 to 15+ FPS).</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- New Project: Facial Emotion Recognition -->
+                <div class="project-card">
+                    <img src="facial-emotion-recognition.png" alt="Facial Emotion Recognition" class="project-image">
+                    <div class="project-content">
+                        <div style="display: flex; justify-content: space-between; align-items: start;">
+                            <h3 class="project-title">Facial Emotion Recognition</h3>
+                            <a href="https://github.com/ahsitab/Facial-Emotion-Recognition" target="_blank" title="GitHub Repo"><i class="fab fa-github" style="color: var(--secondary-color);"></i></a>
+                        </div>
+                        <div class="project-tech">
+                            <span class="tech-pill">PyTorch</span>
+                            <span class="tech-pill">OpenCV</span>
+                            <span class="tech-pill">Streamlit</span>
+                            <span class="tech-pill">ViT</span>
+                        </div>
+                        <div class="project-desc">
+                            <ul>
+                                <li>Implemented and compared 5 deep learning architectures (Simple CNN, Deep CNN, ResNet50, EfficientNetB3, ViT-Small) for robust emotion classification.</li>
+                                <li>Real-time webcam inference via OpenCV with dynamic class probability feedback and custom glassmorphism Streamlit UI.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
                 <!-- New Project: Cow Pose Estimation -->
                 <div class="project-card">
                     <img src="CowPoseTracking.png" alt="Cow Pose Estimation" class="project-image">
@@ -254,6 +349,7 @@
 
                 <!-- New Project: Guava Leaf and Fruit Diseases -->
                 <div class="project-card">
+                    <img src="guava-leaf-diseases.png" alt="Guava Leaf and Fruit Diseases Classification" class="project-image">
                     <div class="project-content">
                         <div style="display: flex; justify-content: space-between; align-items: start;">
                             <h3 class="project-title">Guava Leaf and Fruit Diseases Classification</h3>
@@ -274,7 +370,7 @@
 
                 <!-- New Project: EWU Tools Hub -->
                 <div class="project-card">
-
+                    <img src="ewu-tools-hub.png" alt="EWU Tools Hub" class="project-image">
                     <div class="project-content">
                         <div style="display: flex; justify-content: space-between; align-items: start;">
                             <h3 class="project-title">EWU Tools Hub</h3>
@@ -296,10 +392,61 @@
                     </div>
                 </div>
 
+                <!-- New Project: SimSit AI -->
+                <div class="project-card">
+                    <img src="simsit-ai.png" alt="SimSit AI Chatbot" class="project-image">
+                    <div class="project-content">
+                        <div style="display: flex; justify-content: space-between; align-items: start;">
+                            <h3 class="project-title">SimSit AI – AI Chatbot</h3>
+                            <div class="project-links">
+                                <a href="https://github.com/ahsitab/Chatbot_SimSit" target="_blank" title="GitHub Repo"><i class="fab fa-github" style="color: var(--secondary-color); margin-right: 10px;"></i></a>
+                                <a href="https://chatbot-simsit.onrender.com/" target="_blank" title="Live Link"><i class="fas fa-external-link-alt" style="color: var(--secondary-color);"></i></a>
+                            </div>
+                        </div>
+                        <div class="project-tech">
+                            <span class="tech-pill">Python</span>
+                            <span class="tech-pill">Flask</span>
+                            <span class="tech-pill">Groq API</span>
+                            <span class="tech-pill">Llama 3</span>
+                        </div>
+                        <div class="project-desc">
+                            <ul>
+                                <li>Modern AI-powered chatbot with real-time responses, dark-mode glassmorphism UI, and multi-session chat history.</li>
+                                <li>Fast inference powered by Groq + Llama 3 with cloud deployment on Render.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
 
+                <!-- New Project: Anusha's Atelier (Client Project) -->
+                <div class="project-card">
+                    <img src="anushas-atelier.png" alt="Anusha's Atelier" class="project-image">
+                    <div class="project-content">
+                        <div style="display: flex; justify-content: space-between; align-items: start;">
+                            <h3 class="project-title">Anusha's Atelier <span class="tech-pill" style="font-size: 0.65rem; padding: 2px 8px; vertical-align: middle; background: var(--accent-color); color: white;">Client Project</span></h3>
+                            <div class="project-links">
+                                <a href="https://github.com/ahsitab/Anusha-s-Atelier" target="_blank" title="GitHub Repo"><i class="fab fa-github" style="color: var(--secondary-color); margin-right: 10px;"></i></a>
+                                <a href="https://anusha-s-atelier.vercel.app/" target="_blank" title="Live Link"><i class="fas fa-external-link-alt" style="color: var(--secondary-color);"></i></a>
+                            </div>
+                        </div>
+                        <div class="project-tech">
+                            <span class="tech-pill">HTML</span>
+                            <span class="tech-pill">CSS</span>
+                            <span class="tech-pill">JavaScript</span>
+                            <span class="tech-pill">Vercel</span>
+                        </div>
+                        <div class="project-desc">
+                            <ul>
+                                <li>Premium e-commerce website for a fashion brand featuring elegant UI with product categories for bags, jewelry, sarees, and more.</li>
+                                <li>Fully responsive design with modern aesthetics, deployed on Vercel.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
 
                 <!-- Project 1 -->
                 <div class="project-card">
+                    <img src="surgical-anatomy.png" alt="Surgical Anatomy Instance Segmentation" class="project-image">
                     <div class="project-content">
                         <h3 class="project-title">Surgical Anatomy Instance Segmentation</h3>
                         <div class="project-tech">
@@ -317,6 +464,7 @@
 
                 <!-- Project 2 -->
                 <div class="project-card">
+                    <img src="fish-detection.png" alt="Fish Detection (Self-Supervised)" class="project-image">
                     <div class="project-content">
                         <div style="display: flex; justify-content: space-between; align-items: start;">
                             <h3 class="project-title">Fish Detection (Self-Supervised)</h3>
@@ -476,45 +624,6 @@
         </div>
     </section>
 
-    <!-- Education Section -->
-    <section id="education">
-        <div class="container">
-            <h2 class="section-title">Education</h2>
-            <div class="timeline">
-
-                <div class="timeline-item">
-                    <div class="timeline-dot"></div>
-                    <div class="edu-card">
-                        <span class="edu-year">2022 – Present</span>
-                        <h3>BSc in Computer Science and Engineering</h3>
-                        <h4>East West University</h4>
-                        <p>CGPA: 3.71</p>
-                    </div>
-                </div>
-
-                <div class="timeline-item">
-                    <div class="timeline-dot"></div>
-                    <div class="edu-card">
-                        <span class="edu-year">2019 – 2020</span>
-                        <h3>Higher Secondary Certificate (HSC)</h3>
-                        <h4>St. Gregory High School and College</h4>
-                        <p>GPA: 5.00 | Science Group</p>
-                    </div>
-                </div>
-
-                <div class="timeline-item">
-                    <div class="timeline-dot"></div>
-                    <div class="edu-card">
-                        <span class="edu-year">2016 – 2018</span>
-                        <h3>Secondary School Certificate (SSC)</h3>
-                        <h4>Trust School</h4>
-                        <p>GPA: 5.00 | Science Group</p>
-                    </div>
-                </div>
-
-            </div>
-        </div>
-    </section>
 
     <!-- Achievements & Activities -->
     <section id="achievements">
