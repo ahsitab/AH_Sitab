@@ -993,6 +993,116 @@ footer {
     line-height: 1.6;
 }
 
+/* Achievements Redesign */
+.achievements-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2.5rem;
+}
+
+@media (max-width: 992px) {
+    .achievements-container {
+        grid-template-columns: 1fr;
+    }
+}
+
+.achievement-category-card {
+    background: var(--glass);
+    border: 1px solid var(--glass-border);
+    border-radius: 16px;
+    padding: 2.5rem;
+    position: relative;
+    overflow: hidden;
+    transition: var(--transition);
+}
+
+.achievement-category-card:hover {
+    border-color: var(--secondary-color);
+    box-shadow: 0 10px 30px rgba(52, 152, 219, 0.1);
+}
+
+.achievement-category-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 4px;
+    height: 100%;
+    background: linear-gradient(to bottom, var(--primary-color), var(--accent-color));
+}
+
+.achievement-category-card h3 {
+    font-size: 1.5rem;
+    margin-bottom: 2rem;
+    color: var(--secondary-color);
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+    border-bottom: 1px solid var(--glass-border);
+    padding-bottom: 0.8rem;
+}
+
+.achievement-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.achievement-item-row {
+    display: flex;
+    gap: 1.2rem;
+    align-items: flex-start;
+    transition: var(--transition);
+    padding: 0.5rem;
+    border-radius: 8px;
+}
+
+.achievement-item-row:hover {
+    background: rgba(255, 255, 255, 0.02);
+    transform: translateX(5px);
+}
+
+.achievement-badge {
+    width: 45px;
+    height: 45px;
+    background: rgba(52, 152, 219, 0.1);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--secondary-color);
+    font-size: 1.2rem;
+    flex-shrink: 0;
+    transition: var(--transition);
+    border: 1px solid rgba(52, 152, 219, 0.2);
+}
+
+.achievement-item-row:hover .achievement-badge {
+    background: var(--secondary-color);
+    color: white;
+    transform: scale(1.1);
+}
+
+.achievement-info-content h4 {
+    font-size: 1.15rem;
+    color: var(--text-primary);
+    margin-bottom: 0.2rem;
+}
+
+.achievement-date {
+    font-size: 0.8rem;
+    font-weight: 600;
+    color: var(--accent-color);
+    display: block;
+    margin-bottom: 0.3rem;
+}
+
+.achievement-info-content p {
+    font-size: 0.9rem;
+    color: var(--text-secondary);
+    line-height: 1.5;
+}
+
 /* Responsive */
 @media (max-width: 768px) {
     .container {
