@@ -54,7 +54,7 @@ const observer = new IntersectionObserver((entries) => {
 }, observerOptions);
 
 // Add animation classes to elements
-document.querySelectorAll('.section-title, .about-card, .edu-card, .skill-category-box, .project-card, .faq-item').forEach((el, index) => {
+document.querySelectorAll('.section-title, .about-card, .edu-card, .skill-category-box, .project-card, .faq-item, .interest-card').forEach((el, index) => {
     el.style.opacity = '0';
     el.style.transform = 'translateY(30px)';
     el.style.filter = 'blur(10px)';
