@@ -4,6 +4,7 @@
 */
 
 :root {
+    /* Blue theme (default) */
     --primary-color: #2980b9;
     --secondary-color: #3498db;
     --accent-color: #8e44ad;
@@ -24,13 +25,60 @@
     --secondary-color: #3498db;
     --accent-color: #9b59b6;
     --dark-bg: #f8fafc;
-    /* actually light bg */
     --card-bg: #ffffff;
     --text-primary: #1e293b;
     --text-secondary: #475569;
     --glass: rgba(255, 255, 255, 0.8);
     --glass-border: rgba(0, 0, 0, 0.1);
     --border-color: #ccc;
+}
+
+html[data-color="purple"] {
+    --primary-color: #9333ea;
+    --secondary-color: #a855f7;
+    --accent-color: #ec4899;
+    --dark-bg: #0f0715;
+    --card-bg: #1e102d;
+    --text-primary: #f3e8ff;
+    --text-secondary: #d8b4fe;
+    --glass: rgba(30, 16, 45, 0.7);
+    --glass-border: rgba(216, 180, 254, 0.15);
+}
+
+html[data-theme="light"][data-color="purple"] {
+    --primary-color: #7e22ce;
+    --secondary-color: #9333ea;
+    --accent-color: #db2777;
+    --dark-bg: #faf5ff;
+    --card-bg: #ffffff;
+    --text-primary: #3b0764;
+    --text-secondary: #6b21a8;
+    --glass: rgba(255, 255, 255, 0.8);
+    --glass-border: rgba(126, 34, 206, 0.1);
+}
+
+html[data-color="green"] {
+    --primary-color: #059669;
+    --secondary-color: #10b981;
+    --accent-color: #6366f1;
+    --dark-bg: #09090b;
+    --card-bg: #18181b;
+    --text-primary: #f4f4f5;
+    --text-secondary: #a1a1aa;
+    --glass: rgba(24, 24, 27, 0.7);
+    --glass-border: rgba(255, 255, 255, 0.08);
+}
+
+html[data-theme="light"][data-color="green"] {
+    --primary-color: #059669;
+    --secondary-color: #10b981;
+    --accent-color: #4f46e5;
+    --dark-bg: #f8fafc;
+    --card-bg: #ffffff;
+    --text-primary: #1e293b;
+    --text-secondary: #475569;
+    --glass: rgba(255, 255, 255, 0.8);
+    --glass-border: rgba(0, 0, 0, 0.1);
 }
 
 [data-theme="light"] .section-title {
@@ -752,117 +800,126 @@ footer {
 }
 
 /* Skills Expertise Redesign */
-.skills-expertise-grid {
+.skills-grid-modern {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    gap: 1.5rem;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 2rem;
 }
 
-@media (max-width: 992px) {
-    .skills-expertise-grid {
-        grid-template-columns: 1fr;
-    }
-}
-
-.skill-category-box {
+.skill-card-modern {
     background: var(--card-bg);
     border: 1px solid var(--glass-border);
-    border-radius: 12px;
-    padding: 1.5rem;
-    height: fit-content;
+    border-radius: 16px;
+    padding: 2rem;
     transition: var(--transition);
-}
-
-.skill-category-box:hover {
-    border-color: var(--secondary-color);
-    box-shadow: 0 10px 30px rgba(52, 152, 219, 0.1);
-}
-
-.skill-category-box.h-full {
-    height: 100%;
-}
-
-.mt-2 {
-    margin-top: 1.5rem;
-}
-
-.skill-category-box h3 {
-    font-size: 1.1rem;
-    margin-bottom: 1.2rem;
-    border-bottom: 1px solid var(--glass-border);
-    padding-bottom: 0.5rem;
-    color: var(--text-primary);
-}
-
-.skill-bar-item {
-    margin-bottom: 1rem;
-}
-
-.skill-bar-item:last-child {
-    margin-bottom: 0;
-}
-
-.skill-info {
-    display: flex;
-    justify-content: space-between;
-    font-size: 0.85rem;
-    margin-bottom: 0.4rem;
-    font-weight: 500;
-}
-
-.skill-bar {
-    height: 6px;
-    background: rgba(255, 255, 255, 0.1);
-    border-radius: 3px;
+    position: relative;
     overflow: hidden;
 }
 
-.skill-progress {
+.skill-card-modern::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 4px;
     height: 100%;
-    background: linear-gradient(90deg, var(--accent-color), var(--secondary-color));
-    border-radius: 3px;
+    background: linear-gradient(to bottom, var(--secondary-color), var(--accent-color));
+    opacity: 0;
+    transition: var(--transition);
 }
 
-.circular-skills-grid {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 1.5rem;
-    margin-top: 1rem;
+.skill-card-modern:hover {
+    transform: translateY(-5px);
+    border-color: var(--secondary-color);
+    box-shadow: 0 10px 30px rgba(52, 152, 219, 0.15);
 }
 
-.circular-skill {
+.skill-card-modern:hover::before {
+    opacity: 1;
+}
+
+.skill-card-header {
     display: flex;
-    flex-direction: column;
     align-items: center;
-    text-align: center;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+    border-bottom: 1px solid var(--glass-border);
+    padding-bottom: 1rem;
 }
 
-.circle-progress {
-    width: 60px;
-    height: 60px;
-    border-radius: 50%;
-    background: conic-gradient(var(--accent-color) 0%, rgba(255,255,255,0.1) 0%);
+.icon-wrapper {
+    width: 45px;
+    height: 45px;
+    border-radius: 12px;
+    background: rgba(52, 152, 219, 0.1);
+    color: var(--secondary-color);
     display: flex;
     align-items: center;
     justify-content: center;
-    position: relative;
-    margin-bottom: 0.5rem;
+    font-size: 1.2rem;
 }
 
-.circle-progress::before {
-    content: '';
-    position: absolute;
-    width: 50px;
-    height: 50px;
-    background: var(--card-bg);
-    border-radius: 50%;
+.skill-card-header h3 {
+    font-size: 1.2rem;
+    color: var(--text-primary);
+    margin: 0;
 }
 
-.circle-progress span {
-    position: relative;
-    font-size: 0.8rem;
-    font-weight: 600;
+.skill-chips {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.8rem;
 }
+
+.chip {
+    background: rgba(255, 255, 255, 0.05);
+    color: var(--text-primary);
+    padding: 0.6rem 1rem;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    transition: var(--transition);
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.chip:hover {
+    background: var(--secondary-color);
+    color: white;
+    border-color: var(--secondary-color);
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(52, 152, 219, 0.3);
+}
+
+/* Experience Card specific */
+.experience-card {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+@media (min-width: 768px) {
+    .experience-card {
+        flex-direction: row;
+        align-items: center;
+    }
+}
+
+.experience-logo {
+    width: 100px;
+    height: 100px;
+    object-fit: contain;
+    border-radius: 12px;
+    border: 2px solid var(--glass-border);
+    background: #ffffff;
+    padding: 8px;
+}
+
+.experience-content {
+    flex: 1;
+}
+
 
 /* FAQ Section */
 .faq-container {
