@@ -120,6 +120,39 @@ function updateIcon(theme) {
     }
 }
 
+// Color Theme Logic
+const colorOptions = document.querySelectorAll('.color-option');
+const savedColor = localStorage.getItem('color-theme');
+
+if (savedColor) {
+    htmlEl.setAttribute('data-color', savedColor);
+    updateColorPicker(savedColor);
+} else {
+    // default
+    updateColorPicker('blue');
+}
+
+colorOptions.forEach(option => {
+    option.addEventListener('click', () => {
+        const color = option.getAttribute('data-color');
+        htmlEl.setAttribute('data-color', color);
+        localStorage.setItem('color-theme', color);
+        updateColorPicker(color);
+    });
+});
+
+function updateColorPicker(selectedColor) {
+    colorOptions.forEach(option => {
+        if (option.getAttribute('data-color') === selectedColor) {
+            option.style.borderColor = '#ffffff';
+            option.style.transform = 'scale(1.2)';
+        } else {
+            option.style.borderColor = 'transparent';
+            option.style.transform = 'scale(1)';
+        }
+    });
+}
+
 // Profile Slideshow
 const slides = document.querySelectorAll('.slide');
 let currentSlide = 0;

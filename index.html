@@ -14,7 +14,7 @@
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <!-- Custom CSS -->
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style.css?v=2">
 </head>
 
 <!-- Updated: Manual Trigger -->
@@ -41,6 +41,11 @@
                     <li><a href="#projects">Projects</a></li>
                     <li><a href="#contact">Contact</a></li>
                 </ul>
+                <div class="color-picker" style="display: flex; gap: 0.5rem; margin-left: 1rem; align-items: center;">
+                    <div class="color-option" data-color="blue" style="width: 18px; height: 18px; border-radius: 50%; background: #2980b9; cursor: pointer; border: 2px solid transparent;"></div>
+                    <div class="color-option" data-color="purple" style="width: 18px; height: 18px; border-radius: 50%; background: #9333ea; cursor: pointer; border: 2px solid transparent;"></div>
+                    <div class="color-option" data-color="green" style="width: 18px; height: 18px; border-radius: 50%; background: #059669; cursor: pointer; border: 2px solid transparent;"></div>
+                </div>
                 <div class="theme-toggle">
                     <i class="fas fa-sun" id="theme-icon"></i>
                 </div>
@@ -220,11 +225,48 @@
             <div class="timeline">
                 <div class="timeline-item">
                     <div class="timeline-dot"></div>
-                    <div class="edu-card">
-                        <span class="edu-year">Recent – Present</span>
-                        <h3>Graduate Teacher Assistant</h3>
-                        <h4>East West University (EWU)</h4>
-                        <p>Under Dr. Md Hasanul Ferdaous, Assistant Professor, CSE Dept</p>
+                    <div class="edu-card experience-card">
+                        <img src="NGAIRC.jpg" alt="NGAIRC Logo" class="experience-logo">
+                        <div class="experience-content">
+                            <span class="edu-year">Recent – Present</span>
+                            <h3>Research Intern</h3>
+                            <h4>Next Gen AI Research Center (NGAIRC)</h4>
+                            <p>Engaging in advanced AI and Machine Learning research.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="edu-card experience-card">
+                        <img src="EWU.jpg" alt="EWU Logo" class="experience-logo">
+                        <div class="experience-content">
+                            <span class="edu-year">Recent – Present</span>
+                            <h3>Graduate Teacher Assistant</h3>
+                            <h4>East West University (EWU)</h4>
+                            <p>Under Dr. Md Hasanul Ferdaous, Assistant Professor, CSE Dept</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Publications Section -->
+    <section id="publications">
+        <div class="container">
+            <h2 class="section-title">Publications</h2>
+            <div class="publication-card" style="background: var(--card-bg); border: 1px solid var(--glass-border); padding: 2rem; border-radius: 16px; transition: var(--transition);">
+                <div style="display: flex; gap: 1.5rem; align-items: flex-start; flex-wrap: wrap;">
+                    <div style="font-size: 2.5rem; color: var(--accent-color); flex-shrink: 0;">
+                        <i class="fas fa-book-open"></i>
+                    </div>
+                    <div style="flex: 1; min-width: 250px;">
+                        <h3 style="font-size: 1.25rem; margin-bottom: 0.5rem; line-height: 1.4;">Annotation-Efficient Surgical Instance Segmentation via Semi-Supervised YOLO Frameworks on Laparoscopic Imagery</h3>
+                        <p style="color: var(--text-secondary); margin-bottom: 1rem;">Published in: <strong>FiCloud 2026</strong> - The 13th International Conference on Future Internet of Things and Cloud.</p>
+                        <div style="display: flex; gap: 0.5rem;">
+                            <span class="tech-pill" style="font-size: 0.75rem; padding: 4px 10px; background: rgba(255,255,255,0.05); border-radius: 20px; border: 1px solid var(--glass-border);">Conference Paper</span>
+                            <span class="tech-pill" style="font-size: 0.75rem; padding: 4px 10px; background: rgba(255,255,255,0.05); border-radius: 20px; border: 1px solid var(--glass-border);">2026</span>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -239,161 +281,98 @@
                 <h2 class="section-title" style="margin-top: 0.5rem; margin-bottom: 0;">Skills & expertise</h2>
             </div>
             
-            <div class="skills-expertise-grid">
-                <!-- Column 1 -->
-                <div class="skills-col">
-                    <div class="skill-category-box">
+            <div class="skills-grid-modern">
+                <!-- Programming -->
+                <div class="skill-card-modern">
+                    <div class="skill-card-header">
+                        <div class="icon-wrapper"><i class="fas fa-code"></i></div>
                         <h3>Programming</h3>
-                        <div class="skill-bar-item">
-                            <div class="skill-info"><span>Python</span><span>95%</span></div>
-                            <div class="skill-bar"><div class="skill-progress" style="width: 95%;"></div></div>
-                        </div>
-                        <div class="skill-bar-item">
-                            <div class="skill-info"><span>JavaScript (ES6+)</span><span>90%</span></div>
-                            <div class="skill-bar"><div class="skill-progress" style="width: 90%;"></div></div>
-                        </div>
-                        <div class="skill-bar-item">
-                            <div class="skill-info"><span>C / C++</span><span>85%</span></div>
-                            <div class="skill-bar"><div class="skill-progress" style="width: 85%;"></div></div>
-                        </div>
-                        <div class="skill-bar-item">
-                            <div class="skill-info"><span>Java</span><span>80%</span></div>
-                            <div class="skill-bar"><div class="skill-progress" style="width: 80%;"></div></div>
-                        </div>
-                        <div class="skill-bar-item">
-                            <div class="skill-info"><span>PHP</span><span>80%</span></div>
-                            <div class="skill-bar"><div class="skill-progress" style="width: 80%;"></div></div>
-                        </div>
-                        <div class="skill-bar-item">
-                            <div class="skill-info"><span>SQL</span><span>85%</span></div>
-                            <div class="skill-bar"><div class="skill-progress" style="width: 85%;"></div></div>
-                        </div>
-                        <div class="skill-bar-item">
-                            <div class="skill-info"><span>LATEX</span><span>80%</span></div>
-                            <div class="skill-bar"><div class="skill-progress" style="width: 80%;"></div></div>
-                        </div>
                     </div>
-                    
-                    <div class="skill-category-box mt-2">
-                        <h3>Platforms & Tools</h3>
-                        <div class="skill-bar-item">
-                            <div class="skill-info"><span>GitHub</span><span>90%</span></div>
-                            <div class="skill-bar"><div class="skill-progress" style="width: 90%;"></div></div>
-                        </div>
-                        <div class="skill-bar-item">
-                            <div class="skill-info"><span>VS Code</span><span>95%</span></div>
-                            <div class="skill-bar"><div class="skill-progress" style="width: 95%;"></div></div>
-                        </div>
-                        <div class="skill-bar-item">
-                            <div class="skill-info"><span>Google Colab / Kaggle</span><span>85%</span></div>
-                            <div class="skill-bar"><div class="skill-progress" style="width: 85%;"></div></div>
-                        </div>
-                        <div class="skill-bar-item">
-                            <div class="skill-info"><span>CodeCarbon</span><span>80%</span></div>
-                            <div class="skill-bar"><div class="skill-progress" style="width: 80%;"></div></div>
-                        </div>
+                    <div class="skill-chips">
+                        <span class="chip"><i class="fab fa-python"></i> Python</span>
+                        <span class="chip"><i class="fab fa-js"></i> JavaScript</span>
+                        <span class="chip">C / C++</span>
+                        <span class="chip"><i class="fab fa-java"></i> Java</span>
+                        <span class="chip"><i class="fab fa-php"></i> PHP</span>
+                        <span class="chip"><i class="fas fa-database"></i> SQL</span>
+                        <span class="chip">LATEX</span>
                     </div>
                 </div>
-                
-                <!-- Column 2 -->
-                <div class="skills-col">
-                    <div class="skill-category-box">
-                        <h3>ML / DL Frameworks</h3>
-                        <div class="skill-bar-item">
-                            <div class="skill-info"><span>PyTorch</span><span>85%</span></div>
-                            <div class="skill-bar"><div class="skill-progress" style="width: 85%;"></div></div>
-                        </div>
-                        <div class="skill-bar-item">
-                            <div class="skill-info"><span>TensorFlow</span><span>80%</span></div>
-                            <div class="skill-bar"><div class="skill-progress" style="width: 80%;"></div></div>
-                        </div>
-                        <div class="skill-bar-item">
-                            <div class="skill-info"><span>Scikit-learn</span><span>90%</span></div>
-                            <div class="skill-bar"><div class="skill-progress" style="width: 90%;"></div></div>
-                        </div>
-                        <div class="skill-bar-item">
-                            <div class="skill-info"><span>OpenCV</span><span>85%</span></div>
-                            <div class="skill-bar"><div class="skill-progress" style="width: 85%;"></div></div>
-                        </div>
-                        <div class="skill-bar-item">
-                            <div class="skill-info"><span>YOLO (v8/v11/v12)</span><span>90%</span></div>
-                            <div class="skill-bar"><div class="skill-progress" style="width: 90%;"></div></div>
-                        </div>
-                        <div class="skill-bar-item">
-                            <div class="skill-info"><span>CatBoost / LightGBM</span><span>80%</span></div>
-                            <div class="skill-bar"><div class="skill-progress" style="width: 80%;"></div></div>
-                        </div>
-                    </div>
-                    
-                    <div class="skill-category-box mt-2">
-                        <h3>Research Skills</h3>
-                        <div class="skill-bar-item">
-                            <div class="skill-info"><span>Technical Writing</span><span>85%</span></div>
-                            <div class="skill-bar"><div class="skill-progress" style="width: 85%;"></div></div>
-                        </div>
-                        <div class="skill-bar-item">
-                            <div class="skill-info"><span>Predictive Modelling</span><span>90%</span></div>
-                            <div class="skill-bar"><div class="skill-progress" style="width: 90%;"></div></div>
-                        </div>
-                        <div class="skill-bar-item">
-                            <div class="skill-info"><span>Multi-task Learning</span><span>80%</span></div>
-                            <div class="skill-bar"><div class="skill-progress" style="width: 80%;"></div></div>
-                        </div>
-                        <div class="skill-bar-item">
-                            <div class="skill-info"><span>Ablation Studies</span><span>85%</span></div>
-                            <div class="skill-bar"><div class="skill-progress" style="width: 85%;"></div></div>
-                        </div>
-                    </div>
-                </div>
-                
-                <!-- Column 3 -->
-                <div class="skills-col">
-                    <div class="skill-category-box">
-                        <h3>XAI & Analytics</h3>
-                        <div class="skill-bar-item">
-                            <div class="skill-info"><span>SHAP</span><span>90%</span></div>
-                            <div class="skill-bar"><div class="skill-progress" style="width: 90%;"></div></div>
-                        </div>
-                        <div class="skill-bar-item">
-                            <div class="skill-info"><span>LIME</span><span>85%</span></div>
-                            <div class="skill-bar"><div class="skill-progress" style="width: 85%;"></div></div>
-                        </div>
-                        <div class="skill-bar-item">
-                            <div class="skill-info"><span>Remote Sensing</span><span>80%</span></div>
-                            <div class="skill-bar"><div class="skill-progress" style="width: 80%;"></div></div>
-                        </div>
-                        <div class="skill-bar-item">
-                            <div class="skill-info"><span>MODIS NDVI / NASA POWER</span><span>80%</span></div>
-                            <div class="skill-bar"><div class="skill-progress" style="width: 80%;"></div></div>
-                        </div>
-                        <div class="skill-bar-item">
-                            <div class="skill-info"><span>Statistical Analysis</span><span>85%</span></div>
-                            <div class="skill-bar"><div class="skill-progress" style="width: 85%;"></div></div>
-                        </div>
-                    </div>
 
-                    <div class="skill-category-box mt-2">
+                <!-- Platforms & Tools -->
+                <div class="skill-card-modern">
+                    <div class="skill-card-header">
+                        <div class="icon-wrapper"><i class="fas fa-tools"></i></div>
+                        <h3>Platforms & Tools</h3>
+                    </div>
+                    <div class="skill-chips">
+                        <span class="chip"><i class="fab fa-github"></i> GitHub</span>
+                        <span class="chip">VS Code</span>
+                        <span class="chip">Google Colab</span>
+                        <span class="chip"><i class="fab fa-kaggle"></i> Kaggle</span>
+                        <span class="chip">CodeCarbon</span>
+                    </div>
+                </div>
+
+                <!-- ML / DL Frameworks -->
+                <div class="skill-card-modern">
+                    <div class="skill-card-header">
+                        <div class="icon-wrapper"><i class="fas fa-brain"></i></div>
+                        <h3>ML / DL Frameworks</h3>
+                    </div>
+                    <div class="skill-chips">
+                        <span class="chip">PyTorch</span>
+                        <span class="chip">TensorFlow</span>
+                        <span class="chip">Scikit-learn</span>
+                        <span class="chip">OpenCV</span>
+                        <span class="chip">YOLO (v8-v12)</span>
+                        <span class="chip">CatBoost</span>
+                        <span class="chip">LightGBM</span>
+                    </div>
+                </div>
+
+                <!-- Research Skills -->
+                <div class="skill-card-modern">
+                    <div class="skill-card-header">
+                        <div class="icon-wrapper"><i class="fas fa-microscope"></i></div>
+                        <h3>Research Skills</h3>
+                    </div>
+                    <div class="skill-chips">
+                        <span class="chip">Technical Writing</span>
+                        <span class="chip">Predictive Modelling</span>
+                        <span class="chip">Multi-task Learning</span>
+                        <span class="chip">Ablation Studies</span>
+                    </div>
+                </div>
+
+                <!-- XAI & Analytics -->
+                <div class="skill-card-modern">
+                    <div class="skill-card-header">
+                        <div class="icon-wrapper"><i class="fas fa-chart-pie"></i></div>
+                        <h3>XAI & Analytics</h3>
+                    </div>
+                    <div class="skill-chips">
+                        <span class="chip">SHAP</span>
+                        <span class="chip">LIME</span>
+                        <span class="chip">Remote Sensing</span>
+                        <span class="chip">MODIS NDVI</span>
+                        <span class="chip">Statistical Analysis</span>
+                    </div>
+                </div>
+
+                <!-- Web & DevOps -->
+                <div class="skill-card-modern">
+                    <div class="skill-card-header">
+                        <div class="icon-wrapper"><i class="fas fa-server"></i></div>
                         <h3>Web & DevOps</h3>
-                        <div class="skill-bar-item">
-                            <div class="skill-info"><span>Node.js</span><span>85%</span></div>
-                            <div class="skill-bar"><div class="skill-progress" style="width: 85%;"></div></div>
-                        </div>
-                        <div class="skill-bar-item">
-                            <div class="skill-info"><span>PHP 8</span><span>80%</span></div>
-                            <div class="skill-bar"><div class="skill-progress" style="width: 80%;"></div></div>
-                        </div>
-                        <div class="skill-bar-item">
-                            <div class="skill-info"><span>Docker & Apache</span><span>75%</span></div>
-                            <div class="skill-bar"><div class="skill-progress" style="width: 75%;"></div></div>
-                        </div>
-                        <div class="skill-bar-item">
-                            <div class="skill-info"><span>MongoDB / MySQL / SQLite</span><span>85%</span></div>
-                            <div class="skill-bar"><div class="skill-progress" style="width: 85%;"></div></div>
-                        </div>
-                        <div class="skill-bar-item">
-                            <div class="skill-info"><span>RESTful APIs</span><span>90%</span></div>
-                            <div class="skill-bar"><div class="skill-progress" style="width: 90%;"></div></div>
-                        </div>
+                    </div>
+                    <div class="skill-chips">
+                        <span class="chip"><i class="fab fa-node-js"></i> Node.js</span>
+                        <span class="chip"><i class="fab fa-php"></i> PHP 8</span>
+                        <span class="chip">Apache</span>
+                        <span class="chip">MongoDB</span>
+                        <span class="chip">MySQL</span>
+                        <span class="chip">RESTful APIs</span>
                     </div>
                 </div>
             </div>
@@ -1112,7 +1091,7 @@
     <div class="cursor-outline"></div>
     <canvas id="smoke-canvas"></canvas>
 
-    <script src="script.js"></script>
+    <script src="script.js?v=2"></script>
 </body>
 
 </html>
