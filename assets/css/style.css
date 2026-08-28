@@ -18,6 +18,7 @@
     --font-body: 'Inter', sans-serif;
     --glass: rgba(30, 41, 59, 0.7);
     --glass-border: rgba(255, 255, 255, 0.1);
+    --grid-color: 41, 128, 185;
 }
 
 [data-theme="light"] {
@@ -43,6 +44,7 @@ html[data-color="purple"] {
     --text-secondary: #d8b4fe;
     --glass: rgba(30, 16, 45, 0.7);
     --glass-border: rgba(216, 180, 254, 0.15);
+    --grid-color: 147, 51, 234;
 }
 
 html[data-theme="light"][data-color="purple"] {
@@ -67,6 +69,7 @@ html[data-color="green"] {
     --text-secondary: #a1a1aa;
     --glass: rgba(24, 24, 27, 0.7);
     --glass-border: rgba(255, 255, 255, 0.08);
+    --grid-color: 5, 150, 105;
 }
 
 html[data-theme="light"][data-color="green"] {
@@ -101,6 +104,26 @@ body {
     overflow-x: hidden;
     font-size: 1.125rem;
     cursor: none;
+    position: relative;
+}
+
+/* Background grid pattern */
+body::before {
+    content: '';
+    position: fixed;
+    inset: 0;
+    z-index: 0;
+    pointer-events: none;
+    background-image:
+        linear-gradient(to right, rgba(var(--grid-color, 41, 128, 185), 0.07) 1px, transparent 1px),
+        linear-gradient(to bottom, rgba(var(--grid-color, 41, 128, 185), 0.07) 1px, transparent 1px);
+    background-size: 48px 48px;
+}
+
+/* Ensure sections sit above the grid */
+header, section, footer, .bg-blobs {
+    position: relative;
+    z-index: 1;
 }
 
 /* Custom Cursor Styles */
