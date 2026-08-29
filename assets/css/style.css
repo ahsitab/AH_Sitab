@@ -1321,3 +1321,215 @@ footer {
         font-size: 1.1rem;
     }
 }
+
+/* ============================================================
+   SCROLL REVEAL ANIMATION SYSTEM
+   ============================================================ */
+
+/* --- Base hidden state for all animated elements --- */
+.reveal,
+.reveal-left,
+.reveal-right,
+.reveal-up,
+.reveal-scale {
+    opacity: 0;
+    transition: opacity 0.7s cubic-bezier(0.4, 0, 0.2, 1),
+                transform 0.7s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.reveal        { transform: translateY(40px); }
+.reveal-left   { transform: translateX(-60px); }
+.reveal-right  { transform: translateX(60px); }
+.reveal-up     { transform: translateY(60px); }
+.reveal-scale  { transform: scale(0.88) translateY(30px); }
+
+/* --- Visible (triggered by JS) --- */
+.reveal.visible,
+.reveal-left.visible,
+.reveal-right.visible,
+.reveal-up.visible,
+.reveal-scale.visible {
+    opacity: 1;
+    transform: none;
+}
+
+/* --- Stagger delays for grid children --- */
+.stagger-children > *:nth-child(1)  { transition-delay: 0.05s; }
+.stagger-children > *:nth-child(2)  { transition-delay: 0.15s; }
+.stagger-children > *:nth-child(3)  { transition-delay: 0.25s; }
+.stagger-children > *:nth-child(4)  { transition-delay: 0.35s; }
+.stagger-children > *:nth-child(5)  { transition-delay: 0.45s; }
+.stagger-children > *:nth-child(6)  { transition-delay: 0.55s; }
+.stagger-children > *:nth-child(7)  { transition-delay: 0.65s; }
+.stagger-children > *:nth-child(8)  { transition-delay: 0.75s; }
+.stagger-children > *:nth-child(9)  { transition-delay: 0.85s; }
+.stagger-children > *:nth-child(10) { transition-delay: 0.95s; }
+.stagger-children > *:nth-child(11) { transition-delay: 1.05s; }
+.stagger-children > *:nth-child(12) { transition-delay: 1.15s; }
+
+/* --- Section title shimmer sweep on reveal --- */
+@keyframes shimmer-sweep {
+    0%   { background-position: -200% center; }
+    100% { background-position: 200% center; }
+}
+
+.section-title.visible,
+.subsection-title.visible {
+    animation: shimmer-sweep 1.4s ease forwards;
+    background-size: 200% auto;
+    background-image: linear-gradient(
+        90deg,
+        var(--secondary-color) 0%,
+        var(--accent-color) 30%,
+        #ffffff 50%,
+        var(--accent-color) 70%,
+        var(--secondary-color) 100%
+    );
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+/* --- Section title underline draw-in --- */
+.section-title::after,
+.subsection-title::after {
+    width: 0;
+    transition: width 0.8s cubic-bezier(0.4, 0, 0.2, 1) 0.4s;
+}
+
+.section-title.visible::after,
+.subsection-title.visible::after {
+    width: 60px;
+}
+
+/* --- Timeline line fill animation --- */
+@keyframes timeline-fill {
+    from { height: 0; }
+    to   { height: 100%; }
+}
+
+.timeline.visible::before {
+    animation: timeline-fill 1.2s cubic-bezier(0.4, 0, 0.2, 1) 0.2s both;
+}
+
+/* --- Timeline dot pulse on reveal --- */
+@keyframes dot-pop {
+    0%   { transform: translateX(-50%) scale(0); opacity: 0; }
+    60%  { transform: translateX(-50%) scale(1.4); opacity: 1; }
+    100% { transform: translateX(-50%) scale(1);   opacity: 1; }
+}
+
+.timeline-item.visible .timeline-dot {
+    animation: dot-pop 0.5s cubic-bezier(0.4, 0, 0.2, 1) both;
+}
+
+.timeline-item:nth-child(1).visible .timeline-dot { animation-delay: 0.2s; }
+.timeline-item:nth-child(2).visible .timeline-dot { animation-delay: 0.4s; }
+.timeline-item:nth-child(3).visible .timeline-dot { animation-delay: 0.6s; }
+.timeline-item:nth-child(4).visible .timeline-dot { animation-delay: 0.8s; }
+
+/* Start dot invisible until animation runs */
+.timeline-item .timeline-dot {
+    opacity: 0;
+}
+.timeline-item.visible .timeline-dot {
+    opacity: 1;
+}
+
+/* --- Glowing pulse on timeline dot (after pop) --- */
+@keyframes dot-glow {
+    0%, 100% { box-shadow: 0 0 6px  var(--primary-color); }
+    50%       { box-shadow: 0 0 20px var(--primary-color), 0 0 40px var(--primary-color); }
+}
+
+.timeline-item.visible .timeline-dot {
+    animation: dot-pop 0.5s cubic-bezier(0.4, 0, 0.2, 1) both,
+               dot-glow 2.5s ease-in-out 0.8s infinite;
+}
+
+/* --- Project / skill card float-in with shimmer border on reveal --- */
+@keyframes card-border-glow {
+    0%   { box-shadow: 0 0 0 rgba(52, 152, 219, 0); }
+    50%  { box-shadow: 0 0 20px rgba(52, 152, 219, 0.35), 0 8px 30px rgba(0,0,0,0.3); }
+    100% { box-shadow: 0 0 0 rgba(52, 152, 219, 0); }
+}
+
+.project-card.visible {
+    animation: card-border-glow 1.5s ease 0.6s 1;
+}
+
+/* --- Interest card spin-in icon --- */
+@keyframes icon-spin-in {
+    0%   { transform: rotate(-180deg) scale(0); opacity: 0; }
+    100% { transform: rotate(0deg)    scale(1); opacity: 1; }
+}
+
+.interest-card.visible .interest-icon-wrapper {
+    animation: icon-spin-in 0.6s cubic-bezier(0.34, 1.56, 0.64, 1) 0.3s both;
+}
+
+/* --- About card left-bar slide down on reveal --- */
+@keyframes bar-slide {
+    from { height: 0; }
+    to   { height: 100%; }
+}
+
+.about-card.visible::before {
+    animation: bar-slide 0.9s cubic-bezier(0.4, 0, 0.2, 1) 0.2s both;
+    height: 0;
+}
+
+/* --- Skill chip pop-in stagger --- */
+@keyframes chip-pop {
+    0%   { transform: scale(0.6) translateY(10px); opacity: 0; }
+    70%  { transform: scale(1.08) translateY(-2px); opacity: 1; }
+    100% { transform: scale(1) translateY(0); opacity: 1; }
+}
+
+.skill-card-modern.visible .chip,
+.skill-card-modern.visible .skill-tag {
+    animation: chip-pop 0.4s cubic-bezier(0.34, 1.56, 0.64, 1) both;
+}
+
+.skill-card-modern.visible .chip:nth-child(1)  { animation-delay: 0.1s; }
+.skill-card-modern.visible .chip:nth-child(2)  { animation-delay: 0.18s; }
+.skill-card-modern.visible .chip:nth-child(3)  { animation-delay: 0.26s; }
+.skill-card-modern.visible .chip:nth-child(4)  { animation-delay: 0.34s; }
+.skill-card-modern.visible .chip:nth-child(5)  { animation-delay: 0.42s; }
+.skill-card-modern.visible .chip:nth-child(6)  { animation-delay: 0.50s; }
+.skill-card-modern.visible .chip:nth-child(7)  { animation-delay: 0.58s; }
+
+/* --- Hero text entrance (runs on load, not scroll) --- */
+@keyframes hero-fade-up {
+    from { opacity: 0; transform: translateY(30px); }
+    to   { opacity: 1; transform: translateY(0); }
+}
+
+.hero-text h1  { animation: hero-fade-up 0.8s ease 0.1s both; }
+.hero-text h2  { animation: hero-fade-up 0.8s ease 0.3s both; }
+.contact-info  { animation: hero-fade-up 0.8s ease 0.5s both; }
+.cta-buttons   { animation: hero-fade-up 0.8s ease 0.7s both; }
+.hero-image    { animation: hero-fade-up 0.9s ease 0.4s both; }
+
+/* --- Floating section separator sparkle --- */
+@keyframes sparkle-rotate {
+    from { transform: translateX(-50%) rotate(0deg); }
+    to   { transform: translateX(-50%) rotate(360deg); }
+}
+
+/* --- Experience logo pop --- */
+@keyframes logo-pop {
+    0%   { transform: scale(0) rotate(-15deg); opacity: 0; }
+    70%  { transform: scale(1.1) rotate(3deg);  opacity: 1; }
+    100% { transform: scale(1)   rotate(0deg);  opacity: 1; }
+}
+
+.timeline-item.visible .experience-logo {
+    animation: logo-pop 0.6s cubic-bezier(0.34, 1.56, 0.64, 1) 0.2s both;
+    opacity: 0;
+}
+
+/* Prevent logo from showing before animation */
+.experience-logo {
+    opacity: 0;
+}
