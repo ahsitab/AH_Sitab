@@ -37,6 +37,7 @@
                     <li><a href="#hero">Home</a></li>
                     <li><a href="#about">About</a></li>
                     <li><a href="#education">Education</a></li>
+                    <li><a href="#publications">Publications</a></li>
                     <li><a href="#skills">Skills</a></li>
                     <li><a href="#projects">Projects</a></li>
                     <li><a href="#contact">Contact</a></li>
@@ -273,11 +274,21 @@
                         <i class="fas fa-book-open"></i>
                     </div>
                     <div style="flex: 1; min-width: 250px;">
-                        <h3 style="font-size: 1.25rem; margin-bottom: 0.5rem; line-height: 1.4;">Annotation-Efficient Surgical Instance Segmentation via Semi-Supervised YOLO Frameworks on Laparoscopic Imagery</h3>
-                        <p style="color: var(--text-secondary); margin-bottom: 1rem;">Published in: <strong>FiCloud 2026</strong> - The 13th International Conference on Future Internet of Things and Cloud.</p>
-                        <div style="display: flex; gap: 0.5rem;">
+                        <h3 style="font-size: 1.25rem; margin-bottom: 0.5rem; line-height: 1.4;">
+                            <a href="https://doi.ieeecomputersociety.org/10.1109/FiCloud70576.2026.00045" target="_blank" style="color: var(--text-primary); text-decoration: none; transition: var(--transition);" onmouseover="this.style.color='var(--secondary-color)'" onmouseout="this.style.color='var(--text-primary)'">
+                                Annotation-Efficient Surgical Instance Segmentation via Semi-Supervised YOLO Frameworks on Laparoscopic Imagery
+                            </a>
+                        </h3>
+                        <p style="color: var(--text-secondary); margin-bottom: 0.4rem;">Published in: <strong>FiCloud 2026</strong> - The 13th International Conference on Future Internet of Things and Cloud.</p>
+                        <p style="color: var(--text-secondary); font-size: 0.95rem; margin-bottom: 1rem;">
+                            <strong>Pages:</strong> 279–285 &bull; <strong>DOI:</strong> <a href="https://doi.ieeecomputersociety.org/10.1109/FiCloud70576.2026.00045" target="_blank" style="color: var(--secondary-color); text-decoration: underline;">10.1109/FiCloud70576.2026.00045</a>
+                        </p>
+                        <div style="display: flex; gap: 0.5rem; align-items: center; flex-wrap: wrap;">
                             <span class="tech-pill" style="font-size: 0.75rem; padding: 4px 10px; background: rgba(255,255,255,0.05); border-radius: 20px; border: 1px solid var(--glass-border);">Conference Paper</span>
                             <span class="tech-pill" style="font-size: 0.75rem; padding: 4px 10px; background: rgba(255,255,255,0.05); border-radius: 20px; border: 1px solid var(--glass-border);">2026</span>
+                            <a href="https://doi.ieeecomputersociety.org/10.1109/FiCloud70576.2026.00045" target="_blank" class="btn btn-outline" style="padding: 4px 12px; font-size: 0.8rem; border-radius: 20px; text-decoration: none;">
+                                <i class="fas fa-external-link-alt" style="margin-right: 4px;"></i> View DOI
+                            </a>
                         </div>
                     </div>
                 </div>
@@ -782,15 +793,17 @@
 
             </div>
 
-            <!-- Under Review Projects -->
-            <h3 class="subsection-title">Under Review</h3>
-            <div class="projects-grid">
+            <!-- Ongoing Research Projects -->
+            <h3 class="subsection-title reveal" style="margin-top: 2rem;">Ongoing Research</h3>
+            <div class="projects-grid stagger-children">
 
-                <div class="project-card" style="border-color: var(--accent-color);">
+                <!-- Previous Project: Climatadisk -->
+                <div class="project-card reveal-scale" style="border-color: var(--accent-color);">
                     <div class="project-content">
-                        <h3 class="project-title">Climatadisk: Climate Data Visualization</h3>
+                        <h3 class="project-title" style="font-size: 1.1rem; margin-bottom: 0.5rem;">Climatadisk: Climate Data Visualization</h3>
                         <div class="project-tech">
                             <span class="tech-pill" style="background: var(--accent-color); color: white;">Under Review</span>
+                            <span class="tech-pill">2025</span>
                             <span class="tech-pill">Python</span>
                         </div>
                         <div class="project-desc">
@@ -801,11 +814,13 @@
                     </div>
                 </div>
 
-                <div class="project-card" style="border-color: var(--accent-color);">
+                <!-- Previous Project: Dresden Surgical -->
+                <div class="project-card reveal-scale" style="border-color: var(--accent-color);">
                     <div class="project-content">
-                        <h3 class="project-title">Dresden Surgical: 3D Simulation</h3>
+                        <h3 class="project-title" style="font-size: 1.1rem; margin-bottom: 0.5rem;">Dresden Surgical: 3D Simulation</h3>
                         <div class="project-tech">
                             <span class="tech-pill" style="background: var(--accent-color); color: white;">Under Review</span>
+                            <span class="tech-pill">2025</span>
                             <span class="tech-pill">WebGL</span>
                         </div>
                         <div class="project-desc">
@@ -816,16 +831,134 @@
                     </div>
                 </div>
 
-                <div class="project-card" style="border-color: var(--accent-color);">
+                <!-- Previous Project: Car Damage Severity Classification -->
+                <div class="project-card reveal-scale" style="border-color: var(--accent-color);">
                     <div class="project-content">
-                        <h3 class="project-title">Car Damage Severity Classification</h3>
+                        <h3 class="project-title" style="font-size: 1.1rem; margin-bottom: 0.5rem;">Car Damage Severity Classification</h3>
                         <div class="project-tech">
                             <span class="tech-pill" style="background: var(--accent-color); color: white;">Under Review</span>
+                            <span class="tech-pill">2025</span>
                             <span class="tech-pill">TensorFlow</span>
                         </div>
                         <div class="project-desc">
                             <ul>
                                 <li>Comparative analysis of 8 CNN architectures for damage classification benchmark.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Research Project: Dengue Transcriptomics -->
+                <div class="project-card reveal-scale" style="border-color: var(--accent-color);">
+                    <div class="project-content">
+                        <h3 class="project-title" style="font-size: 1.1rem; margin-bottom: 0.5rem;">Dengue Plasma Leakage Transcriptomics</h3>
+                        <div class="project-tech">
+                            <span class="tech-pill" style="background: var(--accent-color); color: white;">Under Review</span>
+                            <span class="tech-pill">2026</span>
+                            <span class="tech-pill">Bioinformatics</span>
+                            <span class="tech-pill">Feature Selection</span>
+                            <span class="tech-pill">DEG</span>
+                        </div>
+                        <div class="project-desc">
+                            <ul>
+                                <li>Comparative genomic analysis contrasting ML feature selection with traditional DEG methods.</li>
+                                <li>Pinpoints transcriptomic biomarker signatures of severe Dengue plasma leakage.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Research Project: LeafNet Coffee Disease -->
+                <div class="project-card reveal-scale" style="border-color: var(--accent-color);">
+                    <div class="project-content">
+                        <h3 class="project-title" style="font-size: 1.1rem; margin-bottom: 0.5rem;">LeafNet: Reliable Coffee Leaf Diagnosis</h3>
+                        <div class="project-tech">
+                            <span class="tech-pill" style="background: var(--accent-color); color: white;">Under Review</span>
+                            <span class="tech-pill">2026</span>
+                            <span class="tech-pill">LeafNet</span>
+                            <span class="tech-pill">XAI</span>
+                            <span class="tech-pill">Few-Shot</span>
+                        </div>
+                        <div class="project-desc">
+                            <ul>
+                                <li>Diagnostic framework combining duplicate-aware evaluation, robustness testing, and few-shot learning.</li>
+                                <li>Integrates Bayesian uncertainty estimation for high-reliability agricultural AI.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Research Project: Tomato Disease Reliability -->
+                <div class="project-card reveal-scale" style="border-color: var(--accent-color);">
+                    <div class="project-content">
+                        <h3 class="project-title" style="font-size: 1.1rem; margin-bottom: 0.5rem;">Tomato Leaf Disease Reliability Evaluation</h3>
+                        <div class="project-tech">
+                            <span class="tech-pill" style="background: var(--accent-color); color: white;">Under Review</span>
+                            <span class="tech-pill">2026</span>
+                            <span class="tech-pill">Computer Vision</span>
+                            <span class="tech-pill">Duplicate-Aware</span>
+                        </div>
+                        <div class="project-desc">
+                            <ul>
+                                <li>Evaluates plant disease classification beyond clean accuracy using duplicate-aware dataset splits.</li>
+                                <li>Ensures model dependability against data leakage and real-world farm deployment shifts.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Research Project: Potato Blight Lightweight CNN -->
+                <div class="project-card reveal-scale" style="border-color: var(--accent-color);">
+                    <div class="project-content">
+                        <h3 class="project-title" style="font-size: 1.1rem; margin-bottom: 0.5rem;">Lightweight CNN for Potato Blight Staging</h3>
+                        <div class="project-tech">
+                            <span class="tech-pill" style="background: var(--accent-color); color: white;">Under Review</span>
+                            <span class="tech-pill">2026</span>
+                            <span class="tech-pill">Lightweight CNN</span>
+                            <span class="tech-pill">Calibration</span>
+                        </div>
+                        <div class="project-desc">
+                            <ul>
+                                <li>Ultra-lightweight neural network for distinguishing early vs. late potato blight stages on mobile devices.</li>
+                                <li>Rigorous calibration analysis and representation robustness testing under environmental noise.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Research Project: Task-Oriented Fruit Spectral -->
+                <div class="project-card reveal-scale" style="border-color: var(--accent-color);">
+                    <div class="project-content">
+                        <h3 class="project-title" style="font-size: 1.1rem; margin-bottom: 0.5rem;">Compact RGB Spectral Fruit Classification</h3>
+                        <div class="project-tech">
+                            <span class="tech-pill" style="background: var(--accent-color); color: white;">Under Review</span>
+                            <span class="tech-pill">2026</span>
+                            <span class="tech-pill">Spectral Imaging</span>
+                            <span class="tech-pill">Task-Oriented</span>
+                        </div>
+                        <div class="project-desc">
+                            <ul>
+                                <li>Task-oriented evaluation paradigm for compact RGB-derived spectral representations.</li>
+                                <li>Focuses on downstream classification utility over basic pixel-level reconstruction fidelity.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Research Project: Hyperspectral Reconstruction -->
+                <div class="project-card reveal-scale" style="border-color: var(--accent-color);">
+                    <div class="project-content">
+                        <h3 class="project-title" style="font-size: 1.1rem; margin-bottom: 0.5rem;">Anchor-Preserving Hyperspectral Reconstruction</h3>
+                        <div class="project-tech">
+                            <span class="tech-pill" style="background: var(--accent-color); color: white;">Under Review</span>
+                            <span class="tech-pill">2026</span>
+                            <span class="tech-pill">Mobile RGB-NIR</span>
+                            <span class="tech-pill">Coarse-to-Fine</span>
+                        </div>
+                        <div class="project-desc">
+                            <ul>
+                                <li>Anchor-preserving coarse-to-fine framework reconstructing high-dimensional hyperspectral images from mobile RGB–NIR.</li>
+                                <li>Enables affordable, portable multi-spectral field analysis using mobile hardware.</li>
                             </ul>
                         </div>
                     </div>

@@ -92,7 +92,7 @@ WebSite/
 | **Research Interests** | 6 key research areas with icon cards |
 | **Education** | Academic timeline (SSC → HSC → BSc → MSc) |
 | **Experience** | Professional timeline with logos |
-| **Publications** | Conference paper listing (FiCloud 2026) |
+| **Publications** | Published papers (FiCloud 2026) and 6 conference paper submissions under peer review (ICCIT 2026) |
 | **Skills** | Categorised skill chips — Programming, Tools, ML/DL, Research, XAI, Web |
 | **Projects** | Recent & previous project cards with tech stack, descriptions, and links |
 | **Achievements** | Awards/Scholarships and Extracurricular activities |
