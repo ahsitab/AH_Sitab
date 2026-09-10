@@ -161,6 +161,7 @@ The site is deployed via **Netlify** with automatic CI/CD from GitHub.
 |---|---|
 | **Email** | ahsitab111@gmail.com |
 | **Phone / WhatsApp** | +880 1521-571792 |
+| **Google Scholar** | [Profile](https://scholar.google.com/citations?user=6qeKyI4AAAAJ&hl=en) |
 | **LinkedIn** | [asfar-hossain-sitab](https://www.linkedin.com/in/asfar-hossain-sitab-0a5bb1269/) |
 | **GitHub** | [ahsitab](https://github.com/ahsitab) |
 | **Kaggle** | [asfarhossainsitab](https://www.kaggle.com/asfarhossainsitab) |
